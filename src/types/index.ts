@@ -7,6 +7,4 @@ export type ImageIpsum = {
 	width: number;
 };
 
-export type Image = Pick<ImageIpsum, 'id' | 'author' | 'url'> & {
-	uniqueId: string;
-};
+export type Image = Pick<ImageIpsum, 'id' | 'author' | 'url'>;

@@ -1,0 +1,45 @@
+.board-wrapper {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 2.5rem;
+	padding: 0;
+	margin-top: 5rem;
+}
+
+.board-card {
+	background-color: transparent;
+	width: 30rem;
+	height: 20rem;
+	perspective: 100em;
+	cursor: pointer;
+}
+
+.card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+	box-shadow: rgba(100, 100, 111, 0.2) 0 6px 10px 0;
+}
+
+.card-front,
+.card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.card-front {
+	background-color: #badaf9;
+	width: 100%;
+}
+
+.card-back {
+	transform: rotateY(180deg);
+}
